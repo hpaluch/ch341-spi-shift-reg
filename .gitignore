@@ -1,0 +1,12 @@
+# Ignore vim files
+*.swp
+*~
+# Ignore these VS2010 files
+*.suo
+*.sdf
+*.user
+Debug/
+Release/
+ipch/
+*.ipch
+
