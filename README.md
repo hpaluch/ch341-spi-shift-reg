@@ -75,12 +75,12 @@ Sending to SPI:
 Index=0, Value=0xaa
 Index=1, Value=0x55
 SPI returned back data:
-Index=0, Value=0xa9
-Index=1, Value=0x56
+Index=0, Value=0x6a
+Index=1, Value=0x95
 ```
-And LED D2 should be ON.
+And LED D1 should be ON.
 
-NOTES: 1st to bits of returned data can be different than as shown in
+NOTES: 1st and 2nd bits of returned data can be different than as shown in
 above listings - because these are values from two previous clock ticks
 (or should `0` after CD4013 reset)
 

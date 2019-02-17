@@ -32,7 +32,9 @@ int _tmain(int argc, _TCHAR* argv[])
 		goto exit0;
 	}
 
-	if (!CH341SetStream(iDevIndex,0x00)){
+
+	// 0x80 send MSB bit first on SPI
+	if (!CH341SetStream(iDevIndex,0x80)){
 			printf("CH341SetStream failed\r\n");
 			ret = EXIT_FAILURE;
 			goto exit1;
