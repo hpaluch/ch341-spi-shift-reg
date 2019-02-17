@@ -22,15 +22,19 @@ Hardware:
 Software:
 
 * Windows OS - I tested this project on Windows XP SP3 guest in VirtualBox
-* Visual Studio 2010 (This it the last version supporte on XP SP3)
+* Visual Studio 2010 (This it the last version supported on XP SP3)
 
 
 # Setup
 
 The CH341A adapter must be setup following way:
 * jumper set `I2C/SPI` mode
-* voltaget set to 5V TTL logic (this is because used CD4013 D Flip-Flop
-  would be near by required minimum voltage in case of 3.3V
+* voltage set to 5V TTL logic (this is because used CD4013 D Flip-Flop
+  would be near by required minimum voltage in case of 3.3V and too slow
+* please see picture below for correct configuration:
+
+![USB CH341A adapter configuration](https://github.com/hpaluch/ch341-spi-shift-reg/blob/master/images/ch341-spi-5v.jpg?raw=true)
+
 
 Software setup:
 *  Download and install [CH341PAR.ZIP] - USB driver for CH341 chip
@@ -38,7 +42,7 @@ Software setup:
    also for **I2C mode and SPI mode** (yes - even when it is marked parallel).
 *  install VisualSutdio 2010
 
-Create environment variable `CH341_SDK` that sould point to extracted
+Create environment variable `CH341_SDK` that should point to extracted
 `CH341PAR.ZIP` header and library files. For example
 if you have extracted file:
 
@@ -76,7 +80,9 @@ Index=1, Value=0x56
 ```
 And LED D2 should be ON.
 
-
+NOTES: 1st to bits of returned data can be different than as shown in
+above listings - because these are values from two previous clock ticks
+(or should `0` after CD4013 reset)
 
 # Output
 
@@ -84,6 +90,8 @@ Here is output from PulseView:
 
 ![SPI communication - PulseView](https://github.com/hpaluch/ch341-spi-shift-reg/blob/master/PulseView/pulseview-ch341-spi-shiftreg.png?raw=true)
 
+TODO: Why the bytes are swapped (on scope 0x55 0xAA, in byte array 0xAA 0x55
+etc). Probably setting...
 
 [CH341PAR.ZIP]: http://www.wch.cn/downloads/file/7.html
 [Getting started with LC CH341A USB conversion module]:  https://github.com/hpaluch/hpaluch.github.io/wiki/Getting-started-with-LC-CH341A-USB-conversion-module
