@@ -1,6 +1,8 @@
 # Ignore vim files
 *.swp
 *~
+# Ignore PhotoScape backup directory
+Originals/
 # Ignore these VS2010 files
 *.suo
 *.sdf
