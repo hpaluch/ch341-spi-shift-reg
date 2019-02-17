@@ -54,12 +54,17 @@ Then your `CH341_SDK` should be set to `C:\CH341_DRIVER\LIB\C`.
 Open and rebuild solution `TestSPI_VS2010/ch341_spi_shiftreg.sln`
 in VisualStudio 2010. There should be no errors.
 
-Connect your `CH341 USB module` to target circuit. Following pins are used:
-* `GND`
-* `GCC` (5V)
-* `MISO` (master in slave out)
-* `MOSI` (master out slave in)
-* `SCK`  (master clock)
+Connect your `CH341A USB module` to target circuit. Following pins are used:
+
+|PIN Name|Direction|Description|
+|--------|---------|-----------|
+|GND|N/A|Common ground|
+|VCC|N/A|5V supply|
+|MISO|Input|master in slave out - SPI|
+|MOSI|Output|master out slave in - SPI|
+|SCK|Output|master clock - SPI|
+
+NOTE: Direction is from `CH341A USB Module` "view".
 
 Connect your `CH341 USB module` to your PC. There should
 be permanently lighting red LED on USB module.
