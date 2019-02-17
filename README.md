@@ -90,8 +90,8 @@ Here is output from PulseView:
 
 ![SPI communication - PulseView](https://github.com/hpaluch/ch341-spi-shift-reg/blob/master/PulseView/pulseview-ch341-spi-shiftreg.png?raw=true)
 
-TODO: Why the bytes are swapped (on scope 0x55 0xAA, in byte array 0xAA 0x55
-etc). Probably setting...
+Please see yellow arrows - how the data are exactly shifted
+by 2 bits - thanks to these 2 D Flip-Flops working as 2-bit shift register.
 
 [CH341PAR.ZIP]: http://www.wch.cn/downloads/file/7.html
 [Getting started with LC CH341A USB conversion module]:  https://github.com/hpaluch/hpaluch.github.io/wiki/Getting-started-with-LC-CH341A-USB-conversion-module
