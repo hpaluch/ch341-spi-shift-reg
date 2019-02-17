@@ -47,7 +47,8 @@ C:\CH341_DRIVER\LIB\C\CH341DLL.H
 ```
 Then your `CH341_SDK` should be set to `C:\CH341_DRIVER\LIB\C`.
 
-Open and rebuild project in VisualStudio. There should be no errors.
+Open and rebuild solution `TestSPI_VS2010/ch341_spi_shiftreg.sln`
+in VisualStudio 2010. There should be no errors.
 
 Connect your `CH341 USB module` to target circuit. Following pins are used:
 * `GND`
@@ -84,6 +85,7 @@ Here is output from PulseView:
 ![SPI communication - PulseView](https://github.com/hpaluch/ch341-spi-shift-reg/blob/master/PulseView/pulseview-ch341-spi-shiftreg.png?raw=true)
 
 
+[CH341PAR.ZIP]: http://www.wch.cn/downloads/file/7.html
 [Getting started with LC CH341A USB conversion module]:  https://github.com/hpaluch/hpaluch.github.io/wiki/Getting-started-with-LC-CH341A-USB-conversion-module
 [CH341A USB to UART/IIC/SPI/TTL/ISP adapter EPP/MEM Parallel converter]:http://www.chinalctech.com/index.php?_m=mod_product&_a=view&p_id=1220
 [DollaTek CH341A USB zu UART/IIC/SPI/TTL/ISP Adapter EPP/MEM Parallelwandler]:https://www.amazon.de/gp/product/B07DJZDRKG/
