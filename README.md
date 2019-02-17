@@ -19,6 +19,5 @@ TODO:...
 
 Here is output from PulseView:
 
-![SPI communication - PulseView](https://github.com/hpaluch/ch341-spi-shift-reg/blob/master/PulseView/pulseview-ch341-spi-shiftreg.png
-?raw=true)
+![SPI communication - PulseView](https://github.com/hpaluch/ch341-spi-shift-reg/blob/master/PulseView/pulseview-ch341-spi-shiftreg.png?raw=true)
 
