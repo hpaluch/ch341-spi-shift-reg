@@ -98,6 +98,12 @@ Here is output from PulseView:
 Please see yellow arrows - how the data are exactly shifted
 by 2 bits - thanks to these 2 D Flip-Flops working as 2-bit shift register.
 
+And here is also `/CS0` signal (not used in this circuit) - only
+start shown (I used `while(1){ CH341StreamSPI4(); Sleep(10);}` loop to generate
+data for Logic Analyzer):
+
+![/CS0 start - PulseView](https://github.com/hpaluch/ch341-spi-shift-reg/blob/master/PulseView/pulseview-ch341-spi-shiftreg-cs-start.png?raw=true)
+
 [CH341PAR.ZIP]: http://www.wch.cn/downloads/file/7.html
 [Getting started with LC CH341A USB conversion module]:  https://github.com/hpaluch/hpaluch.github.io/wiki/Getting-started-with-LC-CH341A-USB-conversion-module
 [CH341A USB to UART/IIC/SPI/TTL/ISP adapter EPP/MEM Parallel converter]:http://www.chinalctech.com/index.php?_m=mod_product&_a=view&p_id=1220
