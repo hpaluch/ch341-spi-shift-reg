@@ -63,6 +63,11 @@ Connect your `CH341A USB module` to target circuit. Following pins are used:
 |MISO|Input|master in slave out - SPI|
 |MOSI|Output|master out slave in - SPI|
 |SCK|Output|master clock - SPI|
+|/CS0|Output|Chip select 0, active in Low <sup>1</sup>|
+
+----
+1) The `/CS0` signal is currently used by Logic Analyzer only
+   (not connected to test circuit)
 
 NOTE: Direction is from `CH341A USB Module` "view".
 
