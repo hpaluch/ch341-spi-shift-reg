@@ -30,7 +30,7 @@ Software:
 The CH341A adapter must be setup following way:
 * jumper set to `I2C/SPI` mode
 * voltage set to 5V TTL logic (this is because used CD4013 D Flip-Flop
-  would be near by required minimum voltage in case of 3.3V and too slow
+  would be near by required minimum voltage in case of 3.3V and too slow)
 * please see picture below for correct configuration:
 
 ![USB CH341A adapter configuration](https://github.com/hpaluch/ch341-spi-shift-reg/blob/master/images/ch341-spi-5v.jpg?raw=true)
