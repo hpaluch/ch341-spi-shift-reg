@@ -34,16 +34,9 @@ int _tmain(int argc, _TCHAR* argv[])
 
 
 	// 0x80 send MSB bit first on SPI
-	if (!CH341SetStream(iDevIndex,0x80)){
+	// 0x01  I don't know, but it is in example
+	if (!CH341SetStream(iDevIndex,0x81)){
 			printf("CH341SetStream failed\r\n");
-			ret = EXIT_FAILURE;
-			goto exit1;
-	}
-
-	// This call is actually necessary to make SPI work!!!!
-	// set D0=CS0,D1=CS2,D2=CS3,D3=CLK,D4=?,D5=DOUT,D7=DIN
-	if (! CH341Set_D5_D0 (iDevIndex,0x3f,0x0)){
-			printf("CH341Set_D5_D0 failed\r\n");
 			ret = EXIT_FAILURE;
 			goto exit1;
 	}
@@ -52,7 +45,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		ioBuf[0]=0xaa;ioBuf[1]=0x55;
 		printf("Sending to SPI:\r\n");
 		DumpByteArray(ioBuf,2);
-		if (!CH341StreamSPI4(iDevIndex,0,2,ioBuf)){
+		if (!CH341StreamSPI4(iDevIndex,0x80,2,ioBuf)){
 			printf("CH341StreamSPI4 failed\r\n");
 			ret = EXIT_FAILURE;
 			goto exit1;
@@ -60,7 +53,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		printf("SPI returned back data:\r\n");
 		DumpByteArray(ioBuf,2);
 		Sleep(10);
-		break; // comment it out to have stream of data...
+		break; // comment it out to have stream of data - for Logic Analyzer
 	}
 
 
